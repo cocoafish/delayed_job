@@ -8,9 +8,9 @@ module Delayed
       args.each do |arg|
         puts arg
         if arg.kind_of? Hash
-          if arg["mail_settings"] != nil
+          if arg[:mail_settings] != nil
             # this arg provide the mail setting
-            mail_settings = arg
+            mail_settings = arg[:mail_settings]
             args.delete(arg)
             break
           end
