@@ -6,7 +6,6 @@ module Delayed
       #  object.send(method_name, *args).deliver
       mail_settings = nil
       args.each do |arg|
-        puts arg
         if arg.kind_of? Hash
           if arg[:mail_settings] != nil
             # this arg provide the mail setting
